@@ -12,9 +12,22 @@
 (function() {
 
     document.getElementById("run").addEventListener("click", function() {
-
         // your code here
+        var nombreMin=1;
+        var nombreMax=21;
+        var result = 0;
+        var numbersList = "Numbers: ";
+        var squareList = " Square: ";
 
+        var i;
+        for(i=nombreMin; i<=nombreMax;i++){
+          if(i % 2 === 0){
+            result = i *i;
+            numbersList = numbersList+i+"   ";
+            squareList = squareList + result+" ";
+          }
+        }
+        alert(numbersList+"\r"+squareList);
     });
 
 })();

@@ -10,13 +10,19 @@
 // You will have time to focus on it later.
 
 (function() {
-    
+
     // to get the value of an input: document.getElememntById("element-id").value
 
     document.getElementById("run").addEventListener("click", function() {
 
         // your code here
-
+        var result = 1;
+        var number = parseInt(document.getElementById("number").value);
+        var i;
+        for(i=1;i<=number;i++){
+          result *= i;
+        }
+        alert(result);
     });
 
 })();
