@@ -19,7 +19,7 @@
 
       for(var i=0;i<=11;i++){
         date = new Date(year,i,13,8,0,0);
-        if(date.getDay()===5){
+        if(date.getDay()===5){ 
           months = months+monthArray[i] +" ";
         }
       }
