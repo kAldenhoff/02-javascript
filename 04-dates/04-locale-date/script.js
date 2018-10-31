@@ -12,7 +12,12 @@
 (function() {
 
     // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
+    var todayDate;
+    var date = new Date();
+    var dayArray = ["Dimanche","Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi"];
+    var monthArray = ["Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Aout","Septembre","Octobre","Novembre","Décembre"];
 
-    // your code here
+    todayDate = dayArray[date.getDay()] + " " + date.getDate() + " " + monthArray[date.getMonth()] + " " + date.getFullYear()+", "+ date.getHours()+"h"+date.getMinutes();
 
+    document.getElementById("target").innerHTML = todayDate;
 })();

@@ -11,6 +11,19 @@
 
 (function() {
 
-    // your code here
+    document.getElementById('run').addEventListener("click", function(){
+      var year = document.getElementById("year").value;
+      var date;
+      var months="";
+      var monthArray = ["Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Aout","Septembre","Octobre","Novembre","Décembre"];
+
+      for(var i=0;i<=11;i++){
+        date = new Date(year,i,13,8,0,0);
+        if(date.getDay()===5){
+          months = months+monthArray[i] +" ";
+        }
+      }
+      alert(months);
+    });
 
 })();
