@@ -11,6 +11,12 @@
 
 (function() {
 
-  // your code here
+  var choice = prompt("Voulez-vous du gâteau ?")
+
+  if(choice.toLowerCase()==="oui"){
+    alert("Félicitation, vous avez fait le bon choix");
+  }else {
+    alert("Allons allons, du gâteau, ça ne se refuse pas !");
+  }
 
 })();

@@ -11,6 +11,16 @@
 
 (function() {
 
-    // your code here
+  var age;
+var gender;
+var city;
+var confirmMessage = "Etes vous d'accord avec ces informations ?\r";
+
+do {
+  age = prompt("Quel est votre âge ?");
+  gender = prompt("Quel est votre sexe ?");
+  city = prompt("Quel est votre ville ?");
+  confirmMessage = confirmMessage + "Age: "+age+"\r Sexe: "+gender+"\r Ville: "+city;
+}while(!confirm(confirmMessage));
 
 })();
