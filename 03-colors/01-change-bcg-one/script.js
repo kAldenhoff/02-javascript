@@ -12,11 +12,11 @@
 (function() {
 
     var color;
-    var allButtons = document.getElementsByTagName('button');
+    var allButtons = document.querySelectorAll('button');
 
-    Array.from(allButtons).forEach(function(button){
+    allButtons.forEach(function(button){
       button.addEventListener('click',function(){
-        document.body.style.backgroundColor = button.id;
+        document.documentElement.style.backgroundColor = button.id;
       })
     })
 

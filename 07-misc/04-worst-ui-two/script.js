@@ -11,19 +11,30 @@
 
 (function() {
 
-    var allButtons = document.getElementsByTagName('button');
+    var allButtons = document.querySelectorAll('button');
     var target = document.getElementById('target');
     var sum = 460000000;
 
 
-    Array.from(allButtons).forEach(function(button){
+    allButtons.forEach(function(button){
       button.addEventListener('click', function(){
+        var indexButton = Array.from(allButtons).indexOf(button);
         var data_max = button.getAttribute('data-max');
         var data_min = button.getAttribute('data-min');
 
-        sum += parseInt(button.innerText);
-        target.innerText = "+"+sum;
+        number =  parseInt(button.innerText)+1;
         button.innerText===data_max ? button.innerText = data_min : button.innerText++;
+
+
+        if(number<10){
+          number = "0"+number;
+        }
+
+        if(indexButton===0){
+          target.innerText = "+"+number+target.innerText.substring(4,target.innerText.lenght);
+        }else{
+          target.innerText = target.innerText.substring(0,2*(indexButton+1))+number+target.innerText.substring((indexButton+2)*2,target.innerText.lenght);
+        }
       })
     })
 

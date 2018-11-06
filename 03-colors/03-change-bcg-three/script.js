@@ -16,7 +16,7 @@
     var rgb2 = Math.floor((Math.random()*255)+1);
     var rgb3 = Math.floor((Math.random()*255)+1);
 
-    document.body.style.backgroundColor = "rgb("+rgb1+", "+rgb2+", "+rgb3+")";
+    document.documentElement.style.backgroundColor = "rgb("+rgb1+", "+rgb2+", "+rgb3+")";
   });
 
 })();

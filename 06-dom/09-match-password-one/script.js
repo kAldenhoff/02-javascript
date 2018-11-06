@@ -17,8 +17,7 @@
       passOne = document.getElementById('pass-one');
       passTwo = document.getElementById('pass-two');
 
-      document.getElementsByTagName('input')[0].style.borderColor = passOne.value === passTwo.value ? "silver" : "red";
-      document.getElementsByTagName('input')[1].style.borderColor = passOne.value === passTwo.value ? "silver" : "red";
+      document.querySelectorAll("input").forEach(input => input.style.borderColor = passOne.value === passTwo.value ? "silver" : "red");
     })
 
 })();
