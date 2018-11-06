@@ -10,7 +10,15 @@
 // You will have time to focus on it later.
 
 (function() {
+    var passOne;
+    var passTwo;
 
-    // your code here
+    document.getElementById('run').addEventListener('click', function(){
+      passOne = document.getElementById('pass-one');
+      passTwo = document.getElementById('pass-two');
+
+      document.getElementsByTagName('input')[0].style.borderColor = passOne.value === passTwo.value ? "silver" : "red";
+      document.getElementsByTagName('input')[1].style.borderColor = passOne.value === passTwo.value ? "silver" : "red";
+    })
 
 })();

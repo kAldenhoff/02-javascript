@@ -11,6 +11,18 @@
 
 (function() {
 
-    // your code here
+  var table = document.createElement("table");
+  var row;
+  var cell;
+  for(var i = 0;i<10;i++){
+    row = table.insertRow(i);
+    for(var j =0;j<10;j++){
+      cell = row.insertCell(j);
+      cell.appendChild(document.createTextNode((i+1)*(j+1)));
+      row[j] = (i+1)*(j+1);
+    }
+  }
+
+  document.getElementById("target").appendChild(table);
 
 })();

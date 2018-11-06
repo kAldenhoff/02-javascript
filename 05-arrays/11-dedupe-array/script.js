@@ -28,6 +28,11 @@
         "cerise",
     ];
 
-    // your code here
+    document.getElementById('run').addEventListener("click", function(){
+      var uniqueFruit = new Set(fruits);
+      uniqueFruit.forEach(function(fruit){
+        console.log(fruit);
+      })
+    })
 
 })();

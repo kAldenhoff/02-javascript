@@ -11,6 +11,20 @@
 
 (function() {
 
-    // your code here
+    var allButtons = document.getElementsByTagName('button');
+    var target = document.getElementById('target');
+    var sum = 460000000;
+
+
+    Array.from(allButtons).forEach(function(button){
+      button.addEventListener('click', function(){
+        var data_max = button.getAttribute('data-max');
+        var data_min = button.getAttribute('data-min');
+
+        sum += parseInt(button.innerText);
+        target.innerText = "+"+sum;
+        button.innerText===data_max ? button.innerText = data_min : button.innerText++;
+      })
+    })
 
 })();

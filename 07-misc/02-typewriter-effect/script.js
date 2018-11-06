@@ -10,7 +10,21 @@
 // You will have time to focus on it later.
 
 (function() {
+    var target = document.getElementById("target");
+    var txt = target.innerHTML;
+    target.innerHTML="";
+    var speedMax = 150;
+    var speedMin = 50;
+    var i = 0;
 
-    // your code here
+    typeWriter();
 
+  function typeWriter() {
+    if (i < txt.length) {
+      target.innerHTML += txt.charAt(i);
+      i++;
+      speed = Math.floor(Math.random() * (speedMax - speedMin))+speedMin;
+      setTimeout(typeWriter, speed);
+    }
+  }
 })();

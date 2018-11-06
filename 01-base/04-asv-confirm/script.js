@@ -11,7 +11,7 @@
 
 (function() {
 
-  var age;
+var age;
 var gender;
 var city;
 var confirmMessage = "Etes vous d'accord avec ces informations ?\r";

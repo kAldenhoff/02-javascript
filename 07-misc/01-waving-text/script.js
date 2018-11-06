@@ -11,6 +11,16 @@
 
 (function() {
 
-    // your code here
+  var target = document.getElementById("target")
+  var words = target.innerHTML.split(" ");
+  target.innerHTML = "";
+  var fontSize = ['15px','17px','19px','21px','23px','25px','27px','29px'];
+  console.log(words);
 
+  for(var i=0; i<words.length;i++){
+    var span = document.createElement('span');
+    span.innerHTML = words[i]+" ";
+    span.style.fontSize = fontSize[i%fontSize.length];
+    target.appendChild(span);
+  }
 })();

@@ -10,7 +10,11 @@
 // You will have time to focus on it later.
 
 (function() {
+    var target = document.getElementById('target')
+    var slider = document.getElementById('slider')
 
-    // your code here
+    slider.addEventListener('input', function(){
+      target.innerHTML = '+'+slider.value;
+    })
 
 })();

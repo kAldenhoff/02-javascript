@@ -88,7 +88,8 @@
             age: 81,
         },
     ];
-
-    // your code here
+    document.getElementById('run').addEventListener("click", function(){
+      console.log(people.reduce(function(a,b){return {age: a.age + b.age}}));
+    })
 
 })();

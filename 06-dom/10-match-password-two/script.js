@@ -11,6 +11,18 @@
 
 (function() {
 
-    // your code here
+  var passOne;
+  var passTwo;
+
+  document.getElementById('run').addEventListener('click', function(){
+    passOne = document.getElementById('pass-one');
+    passTwo = document.getElementById('pass-two');
+
+    if(passOne.value !== passTwo.value){
+      passOne.classList.add("error");
+      passTwo.classList.add("error");
+    }
+    
+  })
 
 })();

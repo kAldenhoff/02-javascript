@@ -13,17 +13,19 @@
 
   document.getElementById('run').addEventListener("click", function(){
     var numbers = [];
-    var min;
-    var max;
     var sum;
-    var avg;
 
     for(var i=1;i<11;i++){
       numbers.push(Math.floor(Math.random()*100)+1);
       document.getElementById("n-"+i).innerHTML = numbers[i-1];
     }
+
     document.getElementById("min").innerHTML = Math.min(...numbers);
     document.getElementById("max").innerHTML = Math.max(...numbers);
+    sum = numbers.reduce(function(a,b){ return a+b},0);
+    document.getElementById("sum").innerHTML = sum
+    document.getElementById("average").innerHTML = sum / numbers.length;
+
   })
 
 

@@ -11,6 +11,11 @@
 
 (function() {
 
-    // your code here
+  var input = document.getElementById("pass-one");
+  var reg = new RegExp("(?=.*[0-9]{2,}).{8,}");
+
+  input.addEventListener("input", function(){
+    document.getElementById('validity').innerHTML = reg.test(input.value) ? "Ok " : "Pas ok";
+  })
 
 })();
