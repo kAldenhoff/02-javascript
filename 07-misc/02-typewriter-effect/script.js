@@ -17,7 +17,7 @@
     var speedMin = 50;
     var i = 0;
 
-    var interval = setInterval(typeWriter,Math.floor(Math.random() * (speedMax - speedMin))+speedMin);
+    typeWriter();
 
   function typeWriter() {
 
@@ -25,8 +25,7 @@
       target.innerHTML += txt.charAt(i);
       i++;
       speed = Math.floor(Math.random() * (speedMax - speedMin))+speedMin;
-    }else{
-      clearInterval(interval);
+      setTimeout(typeWriter, speed);
     }
   }
 })();
