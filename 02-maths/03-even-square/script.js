@@ -19,8 +19,7 @@
         var numbersList = "Numbers: ";
         var squareList = " Square: ";
 
-        var i;
-        for(i=nombreMin; i<=nombreMax;i++){
+        for(var i=nombreMin; i<=nombreMax;i++){
           if(i % 2 === 0){
             result = i *i;
             numbersList = numbersList+i+"   ";

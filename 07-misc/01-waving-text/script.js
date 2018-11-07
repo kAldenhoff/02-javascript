@@ -12,15 +12,33 @@
 (function() {
 
   var target = document.getElementById("target")
+  var txt = target.innerText;
   var words = target.innerHTML.split(" ");
-  target.innerHTML = "";
-  var fontSize = ['15px','17px','19px','21px','23px','25px','27px','29px'];
-  console.log(words);
+  var fontSize = ['11px','15px','19px','25px','19px','15px','11px'];
 
-  for(var i=0; i<words.length;i++){
-    var span = document.createElement('span');
-    span.innerHTML = words[i]+" ";
-    span.style.fontSize = fontSize[i%fontSize.length];
-    target.appendChild(span);
+  target.innerHTML="";
+  createSpan();
+  setInterval(changeFontSize, 125);
+
+
+  function createSpan(){
+    for(var i=0; i<words.length;i++){
+      var span = document.createElement('span');
+      span.innerHTML = words[i]+" ";
+      span.classList.add("wordsToChange");
+      target.appendChild(span);
+    }
+  }
+
+  function changeFontSize(){
+    var allSpan = document.querySelectorAll('span.wordsToChange');
+    var temp = fontSize[0];
+
+    fontSize.shift();
+    fontSize.push(temp);
+    
+    for(var i=0; i<words.length;i++){
+      allSpan[i].style.fontSize = fontSize[i%fontSize.length];
+    }
   }
 })();

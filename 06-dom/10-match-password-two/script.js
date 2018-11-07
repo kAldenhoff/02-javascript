@@ -22,7 +22,7 @@
       passOne.classList.add("error");
       passTwo.classList.add("error");
     }
-    
+
   })
 
 })();

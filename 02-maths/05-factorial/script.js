@@ -18,8 +18,8 @@
         // your code here
         var result = 1;
         var number = parseInt(document.getElementById("number").value);
-        var i;
-        for(i=1;i<=number;i++){
+
+        for(var i=1;i<=number;i++){
           result *= i;
         }
         alert(result);

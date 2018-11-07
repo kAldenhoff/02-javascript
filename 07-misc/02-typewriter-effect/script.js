@@ -16,10 +16,11 @@
     var speedMax = 150;
     var speedMin = 50;
     var i = 0;
-
+    
     typeWriter();
 
   function typeWriter() {
+
     if (i < txt.length) {
       target.innerHTML += txt.charAt(i);
       i++;

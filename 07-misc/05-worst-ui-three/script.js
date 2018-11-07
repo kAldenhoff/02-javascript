@@ -18,7 +18,7 @@
 
   Array.from(allButtons).forEach(function(button){
     button.addEventListener('click', function(){
-      
+
       var indexButton = Array.from(allButtons).indexOf(button);
       var input = document.getElementById(button.id.substring(4,button.id.length));
       var max = input.getAttribute('data-max');
@@ -29,7 +29,7 @@
         stopIncrement();
         timerList[indexButton] = 0;
       }else{
-        timerList[indexButton] = setInterval(incrementInput, 500);
+        timerList[indexButton] = setInterval(incrementInput, 250);
       }
 
       function incrementInput(){
