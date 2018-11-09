@@ -1,3 +1,4 @@
+
 /* becode/javascript
  *
  * /02-maths/05-factorial/script.js - 2.5: Factorielle
@@ -16,8 +17,8 @@
     document.getElementById("run").addEventListener("click", function() {
 
         // your code here
-        var result = 1;
-        var number = parseInt(document.getElementById("number").value);
+        var result=1;
+        var number = document.getElementById("number").value;
 
         for(var i=1;i<=number;i++){
           result *= i;

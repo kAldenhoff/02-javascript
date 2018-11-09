@@ -30,6 +30,7 @@
 
     document.getElementById('run').addEventListener("click", function(){
       var uniqueFruit = new Set(fruits);
+      console.log(uniqueFruit);
       uniqueFruit.forEach(function(fruit){
         console.log(fruit);
       })

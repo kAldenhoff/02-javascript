@@ -11,10 +11,15 @@
 
 (function() {
   var image = document.getElementsByTagName("img")[0];
-  var sourceHover = image.getAttribute("data-hover");
-  
+  var originalSource = image.src;
+  var hoverSource = image.getAttribute("data-hover");
+
   image.addEventListener("mouseover", function(){
-    image.src = sourceHover;
+    image.src = hoverSource;
   });
+
+  image.addEventListener("mouseout",function(){
+    image.src = originalSource;
+  })
 
 })();

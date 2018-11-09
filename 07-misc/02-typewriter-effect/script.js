@@ -19,13 +19,13 @@
 
     typeWriter();
 
-  function typeWriter() {
+    function typeWriter() {
 
-    if (i < txt.length) {
-      target.innerHTML += txt.charAt(i);
-      i++;
-      speed = Math.floor(Math.random() * (speedMax - speedMin))+speedMin;
-      setTimeout(typeWriter, speed);
+      if (i < txt.length) {
+        target.innerHTML += txt.charAt(i);
+        i++;
+        speed = Math.floor(Math.random() * (speedMax - speedMin))+speedMin;
+        setTimeout(typeWriter, speed);
+      }
     }
-  }
 })();

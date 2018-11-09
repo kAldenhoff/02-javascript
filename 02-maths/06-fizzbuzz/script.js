@@ -13,11 +13,10 @@
 
     // your code here
     var result="";
-    var i;
     var mod3;
     var mod5;
 
-    for(i=0;i<=100;i++){
+    for(var i=0;i<=100;i++){
       mod3 = i % 3;
       mod5 = i % 5;
 

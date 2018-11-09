@@ -12,11 +12,13 @@
 (function() {
 
   document.getElementById('run').addEventListener("click", function(){
-    var rgb1 = Math.floor((Math.random()*255)+1);
-    var rgb2 = Math.floor((Math.random()*255)+1);
-    var rgb3 = Math.floor((Math.random()*255)+1);
+    var color=[];
 
-    document.documentElement.style.backgroundColor = "rgb("+rgb1+", "+rgb2+", "+rgb3+")";
+    for(var i=0;i<3;i++){
+      color.push(Math.floor((Math.random()*255)+1));
+    }
+
+    document.documentElement.style.backgroundColor = "rgb("+color[0]+", "+color[1]+", "+color[2]+")";
   });
 
 })();

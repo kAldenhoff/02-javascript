@@ -22,6 +22,7 @@
 
     document.getElementById("min").innerHTML = Math.min(...numbers);
     document.getElementById("max").innerHTML = Math.max(...numbers);
+
     sum = numbers.reduce(function(a,b){ return a+b},0);
     document.getElementById("sum").innerHTML = sum
     document.getElementById("average").innerHTML = sum / numbers.length;

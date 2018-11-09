@@ -18,6 +18,10 @@
       passTwo = document.getElementById('pass-two');
 
       document.querySelectorAll("input").forEach(input => input.style.borderColor = passOne.value === passTwo.value ? "silver" : "red");
+
+      /* Version 1 ligne
+          document.querySelectorAll("input").forEach(input => input.style.borderColor = document.querySelectorAll("input")[0].value===document.querySelectorAll("input")[1].value ? "silver" : "red");
+      */
     })
 
 })();

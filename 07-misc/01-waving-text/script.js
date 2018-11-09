@@ -18,7 +18,7 @@
 
   target.innerHTML="";
   createSpan();
-  setInterval(changeFontSize, 125);
+  setInterval(changeFontSize, 50);
 
 
   function createSpan(){
@@ -36,7 +36,7 @@
 
     fontSize.shift();
     fontSize.push(temp);
-    
+
     for(var i=0; i<words.length;i++){
       allSpan[i].style.fontSize = fontSize[i%fontSize.length];
     }
