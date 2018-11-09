@@ -14,7 +14,7 @@
     var table = document.createElement("table");
 
     for(var i = 0;i<10;i++){
-      table.insertRow(i).innerHTML="Rangée "+i;
+      table.insertRow(i).insertCell().textContent = "Rangée "+i;
     }
 
     document.getElementById("target").appendChild(table);

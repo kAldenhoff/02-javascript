@@ -12,14 +12,13 @@
 (function() {
 
   var target = document.getElementById("target")
-  var txt = target.innerText;
   var words = target.innerHTML.split(" ");
-  var fontSize = ['11px','15px','19px','25px','19px','15px','11px'];
+  var fontSize = ['13px','17px','21px','25px','21px','17px','13px'];
 
   target.innerHTML="";
-  createSpan();
-  setInterval(changeFontSize, 50);
 
+  createSpan();
+  setInterval(changeFontSize, 500);
 
   function createSpan(){
     for(var i=0; i<words.length;i++){

@@ -17,9 +17,8 @@
   for(var i = 0;i<10;i++){
     row = table.insertRow(i);
     for(var j =0;j<10;j++){
-      cell = row.insertCell(j);
-      cell.appendChild(document.createTextNode((i+1)*(j+1)));
-      row[j] = (i+1)*(j+1);
+      cell = row.insertCell(j).textContent = (i+1)*(j+1) ;
+
     }
   }
 

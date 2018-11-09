@@ -11,6 +11,6 @@
 
 (function() {
 
-    document.getElementsByClassName("target")["0"].innerHTML = "owned";
+    document.getElementsByClassName("target")[0].innerHTML = "owned";
 
 })();
