@@ -12,7 +12,7 @@
 (function() {
 
   var input = document.getElementById("pass-one");
-  var reg = new RegExp("(?=[\w\d\S]*[0-9]{2,}).{8,}");
+  var reg = new RegExp("(?=.*[0-9].*[0-9])[0-9a-zA-Z!@#$%0-9]{8,}");
 
   input.addEventListener("input", function(){
     document.getElementById('validity').innerHTML = reg.test(input.value) ? "Ok " : "Pas ok";
