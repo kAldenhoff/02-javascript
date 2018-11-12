@@ -18,7 +18,6 @@
     row = table.insertRow(i);
     for(var j =0;j<10;j++){
       cell = row.insertCell(j).textContent = (i+1)*(j+1) ;
-
     }
   }
 

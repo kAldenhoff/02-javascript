@@ -13,8 +13,6 @@
 
     var allButtons = document.querySelectorAll('button');
     var target = document.getElementById('target');
-    var sum = 460000000;
-
 
     allButtons.forEach(function(button){
       button.addEventListener('click', function(){

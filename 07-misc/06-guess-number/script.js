@@ -11,7 +11,7 @@
 
 (function() {
 
-    var chance = 10;
+    var chance = 5;
     var number = Math.floor(Math.random()*100);
     var message;
     var index = 1;

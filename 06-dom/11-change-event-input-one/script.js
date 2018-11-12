@@ -1,4 +1,4 @@
-/* becode/javascript
+ /* becode/javascript
  *
  * /06-dom/11-change-event-input-one/script.js - 6.11: événement change (1)
  *

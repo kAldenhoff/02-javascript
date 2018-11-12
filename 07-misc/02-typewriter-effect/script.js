@@ -18,7 +18,8 @@
     var i = 0;
 
     typeWriter();
-
+    var inter;
+    
     function typeWriter() {
 
       if (i < txt.length) {
@@ -28,4 +29,7 @@
         setTimeout(typeWriter, speed);
       }
     }
+
+
+
 })();
