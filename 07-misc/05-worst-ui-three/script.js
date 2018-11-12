@@ -17,38 +17,40 @@
 
 
   Array.from(allButtons).forEach(function(button){
+    var indexButton = Array.from(allButtons).indexOf(button);
+    var input = document.getElementById(button.id.substring(4,button.id.length));
+    var max = input.getAttribute('data-max');
+    var min = input.getAttribute('data-min');
+    timerList[indexButton] = setInterval(incrementInput, 250);
+    var timer = timerList[indexButton];
+
+
+    function incrementInput(){
+      input.value < max ? input.value++ : input.value = min;
+    }
+
+    function stopIncrement(){
+      clearInterval(timer);
+      if(input.value.length===1){
+        input.value = "0"+input.value;
+      }
+
+      if(indexButton===0){
+        target.innerText = "+"+input.value+target.innerText.substring(4,target.innerText.lenght);
+      }else{
+        target.innerText = target.innerText.substring(0,2*(indexButton+1))+input.value+target.innerText.substring((indexButton+2)*2,target.innerText.lenght);
+      }
+    }
+
     button.addEventListener('click', function(){
 
-      var indexButton = Array.from(allButtons).indexOf(button);
-      var input = document.getElementById(button.id.substring(4,button.id.length));
-      var max = input.getAttribute('data-max');
-      var min = input.getAttribute('data-min');
-      var timer = timerList[indexButton];
-
+      timer = timerList[indexButton];
       if(timer>0){
         stopIncrement();
         timerList[indexButton] = 0;
       }else{
         timerList[indexButton] = setInterval(incrementInput, 250);
       }
-
-      function incrementInput(){
-        input.value < max ? input.value++ : input.value = min;
-      }
-
-      function stopIncrement(){
-        clearInterval(timer);
-        if(input.value.length===1){
-          input.value = "0"+input.value;
-        }
-
-        if(indexButton===0){
-          target.innerText = "+"+input.value+target.innerText.substring(4,target.innerText.lenght);
-        }else{
-          target.innerText = target.innerText.substring(0,2*(indexButton+1))+input.value+target.innerText.substring((indexButton+2)*2,target.innerText.lenght);
-        }
-      }
     })
   })
-
 })();
